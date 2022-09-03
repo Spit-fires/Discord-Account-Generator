@@ -131,6 +131,7 @@ sleep(5)
 
 print(f'Made account:')
 print(f'{email}:{password}:{username}:{token}')
-
+with open('accs.txt', 'a') as file:
+    file.write('\n'.join(token))
 sleep(5)
 driver.close() 
